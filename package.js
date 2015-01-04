@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Wrapper for the Amazon Product Advertising API NPM module, apac",
-  version: "0.0.1",
+  version: "0.0.2",
   git: "https://github.com/alexsmr/meteor-apac.git",
   name: "alexsmr:apac"
 });
@@ -11,7 +11,11 @@ Npm.depends({
 
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@1.0.2.1');
+  if (api.export) {
+    api.export('apac', 'server');
+  }
+  api.use(['underscore'],'server');
   api.addFiles('server/lib/meteor-apac.js','server');
-  api.export('apac');
+
 });
 
