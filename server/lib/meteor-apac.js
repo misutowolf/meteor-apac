@@ -1,7 +1,7 @@
 apac=Npm.require("apac");
  
 function makeSyncMethod(method){
-	var wrapped=Meteor._wrapAsync(method);
+	var wrapped=Meteor.wrapAsync(method);
 	var syncMethod=function(){
 		return wrapped.apply(this,arguments);
 	};
