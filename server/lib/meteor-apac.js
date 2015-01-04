@@ -1,5 +1,5 @@
 apac=Npm.require("apac");
- 
+
 function makeSyncMethod(method){
 	var wrapped=Meteor.wrapAsync(method);
 	var syncMethod=function(){
@@ -8,6 +8,6 @@ function makeSyncMethod(method){
 	return syncMethod;
 }
 
-_.extend(apac.prototype, {
+_.extend(apac.OperationHelper.prototype, {
 	executeSync: makeSyncMethod(apac.OperationHelper.prototype.execute)
 });

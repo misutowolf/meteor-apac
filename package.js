@@ -1,6 +1,6 @@
 Package.describe({
   summary: "Wrapper for the Amazon Product Advertising API NPM module, apac",
-  version: "0.0.3",
+  version: "0.0.4",
   git: "https://github.com/alexsmr/meteor-apac.git",
   name: "alexsmr:apac"
 });
